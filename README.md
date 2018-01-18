@@ -2,8 +2,8 @@
 
 ## Must-to-have
 
-- Develop a php script which uses one of sorting algorithms called "Quick Sort". *
-- Describe the algorithm. 
+- Develop a PHP script which uses one of sorting algorithms called "Quick Sort". *
+- Describe the Quick Sort algorithm.
 - Apply PHPDoc to decribe the code. *
 - Test your code with 5 different data sets.
 
