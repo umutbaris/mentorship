@@ -4,10 +4,10 @@
 
 - Develop a php script which uses one of sorting algorithms called "Quick Sort".
 - Describe the algorithm.
-- It is recommended to use PHP class.
-- Use php docs blocks above all functions which you create and beginning of the class.
-- Test your code with 5 different data set.
+- Apply PHPDoc to decribe the code.
+- Test your code with 5 different data sets.
 
 ## Should-to-have
 
 - Investigate PHP Code Standarts and apply PSR-2 in the PHP script.
+- Apply OOP paradigm.
