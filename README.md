@@ -10,4 +10,4 @@
 
 ## Should-to-have
 
-- Investigate the PHP Code Standarts and apply PSR-2 in your code.
+- Investigate PHP Code Standarts and apply PSR-2 in the PHP script.
