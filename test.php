@@ -6,20 +6,20 @@
  * Time: 21:37
  */
 
-// NOT USING YET
-// UNDER CONSTRUCTION :)
 
 
-require 'quicksort.php';
+require_once __DIR__ . '/quicksort.php';
 
 class Test
 {
 
     function __construct()
     {
+
     }
 
-    public function test(){
+    public function applyTest(){
+
         $Quick_Sort = new QuickSort();
         $unsorted = array
         (
@@ -40,4 +40,5 @@ class Test
 
 }
 
-
+$test = new Test();
+$test->applyTest();

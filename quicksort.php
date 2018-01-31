@@ -7,7 +7,7 @@
  * Time: 16:28
  */
 
-//class QuickSort {
+class QuickSort {
     function quickSort($unsorted)
     {
 
@@ -25,13 +25,13 @@
                 }
             }
 
-            return array_merge(quickSort($left), array($pivot), quickSort($right));
+            return array_merge($this->quickSort($left), array($pivot), $this->quickSort($right));
         }
 
     }
-//}
+}
 
-    $unsorted = array
+   /* $unsorted = array
     (
         array(1, 9, 0, 3),
         array(6, 6, 9, 4, 9, 1, 1, 7, 7, 6, 6),
@@ -43,5 +43,5 @@
     foreach ($unsorted as $val) {
         $sorted = quickSort($val);
         echo implode(" - ", $sorted), PHP_EOL;;
-    }
+    }*/
 
