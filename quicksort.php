@@ -8,7 +8,18 @@
  */
 
 class QuickSort {
-    function quickSort($unsorted)
+
+    /* This is quick sort algorithm function. Function takes unsorted parameter to get the unsorted set of numbers.
+    It firstly controls count of numbers. If there is only one number, no need to sort so it returns what it is the number.
+
+    If there are more than one number, quick sort algorithm starts. Algorithm choose a number and accept it the pivot
+    number. I preferred first number as pivot with using $unsorted[]. Two array defined left and right. Left  for
+    smaller than pivot, right for bigger than pivot. All elements of the array compared pivot value with for loop. The
+    smaller ones added left array, bigger ones added right array. The left and right arrays call to function to be sort
+    with same logic. Latest all arrays merged and returned.
+      */
+
+    public function quickSort($unsorted)
     {
 
         if (count($unsorted) <= 1) {
@@ -31,17 +42,4 @@ class QuickSort {
     }
 }
 
-   /* $unsorted = array
-    (
-        array(1, 9, 0, 3),
-        array(6, 6, 9, 4, 9, 1, 1, 7, 7, 6, 6),
-        array(3, 5, 0),
-        array(5, 8, 0, 6, 3, 5, 3, 4),
-        array(4, 4, 4, 4, 4, 4,)
-    );
-
-    foreach ($unsorted as $val) {
-        $sorted = quickSort($val);
-        echo implode(" - ", $sorted), PHP_EOL;;
-    }*/
 

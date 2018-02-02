@@ -18,9 +18,14 @@ class Test
 
     }
 
-    public function applyTest(){
+    /* This function wrote to test quicksort algorithm. QuickSort class assigned Quick_Sort object. There is a multiple
+    array for testing. All elements of the array calls quick sort algorithm which foreach loop. So quicksort algorithm
+    returns sorted set of numbers. Then printed sorted numbers.   */
 
-        $Quick_Sort = new QuickSort();
+
+    public function applyTest($unsorted){
+
+        $Quick_Sort = new QuickSort($unsorted);
         $unsorted = array
         (
             array(1, 9, 0, 3),
@@ -41,4 +46,4 @@ class Test
 }
 
 $test = new Test();
-$test->applyTest();
+$test->applyTest($unsorted);
