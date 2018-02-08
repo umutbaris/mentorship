@@ -12,6 +12,9 @@ require_once __DIR__ . '/quicksort.php';
 
 class Test
 {
+    /**
+     * Test constructor.
+     */
 
     function __construct()
     {
@@ -22,6 +25,11 @@ class Test
     array for testing. All elements of the array calls quick sort algorithm which foreach loop. So quicksort algorithm
     returns sorted set of numbers. Then printed sorted numbers.   */
 
+    /**
+     * Test values for any sorting algorithm
+     * @param $unsorted
+     * @return int
+     */
 
     public function applyTest($unsorted){
 

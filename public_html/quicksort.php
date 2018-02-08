@@ -19,6 +19,13 @@ class QuickSort {
     with same logic. Latest all arrays merged and returned.
       */
 
+
+    /**
+     * QuickSort number sorting algorithm
+     * @param $unsorted
+     * @return int
+     */
+
     public function quickSort($unsorted)
     {
 
@@ -35,11 +42,14 @@ class QuickSort {
                     $right[] = $unsorted[$i];
                 }
             }
-
             return array_merge($this->quickSort($left), array($pivot), $this->quickSort($right));
         }
 
     }
 }
+
+
+
+
 
 

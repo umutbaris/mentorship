@@ -20,3 +20,10 @@ https://hub.docker.com/_/php/
 https://www.geeksforgeeks.org/quick-sort/
 http://bilgisayarkavramlari.sadievrenseker.com/2008/08/09/hizli-siralama-algoritmasi-quick-sort-algorithm/
 http://www.php-fig.org/psr/psr-2/
+https://manual.phpdoc.org/HTMLSmartyConverter/HandS/phpDocumentor/tutorial_tags.return.pkg.html
+
+
+
+
+
+# docker run -it --rm --name quicksort -v "$PWD":/Users/trkarasu/Projects/mentorship -w /Users/trkarasu/Projects/mentorship php:7.0-cli php test.php
