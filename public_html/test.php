@@ -47,7 +47,7 @@ class Test
         foreach ($unsorted as $val)
         {
             $sorted = $Quick_Sort->quickSort($val);
-            echo implode(" - ", $sorted), PHP_EOL;;
+            echo implode(" - ", $sorted), "<br>";
         }
     }
 
