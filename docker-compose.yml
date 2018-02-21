@@ -1,4 +1,4 @@
-version: '3'
+version: '2'
 services:
   web:
     image: nginx
@@ -9,8 +9,17 @@ services:
       - ./conf.d:/etc/nginx/conf.d
     links:
       - php
+    networks:
+      - mentorship-network
   php:
-    image: php
+    image: php:fpm
     volumes:
       - ./web:/var/www/html
-    tty: true
+    networks:
+      - mentorship-network
+    expose:
+      - 9000
+    # tty: true
+networks:
+  mentorship-network:
+    driver: bridge
