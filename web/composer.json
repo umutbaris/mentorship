@@ -1,11 +1,10 @@
 {
-    "require-dev": {
+    "require": {
         "phpunit/phpunit": "^6.0"
     },
-
-    "autoload-dev": {
+    "autoload": {
         "classmap": [
-            "public_html/QuicksortTest.php"
+            "."
         ]
     }
 }

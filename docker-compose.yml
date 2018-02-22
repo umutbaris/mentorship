@@ -12,7 +12,10 @@ services:
     networks:
       - mentorship-network
   php:
-    image: php:fpm
+    # image: php:fpm
+    build:
+      context: ./
+      dockerfile: Dockerfile-phpfpm
     volumes:
       - ./web:/var/www/html
     networks:
