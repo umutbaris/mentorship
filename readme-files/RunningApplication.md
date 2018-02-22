@@ -4,9 +4,7 @@
 
 ```docker-compose up```
 
-```http://localhost:8080/```
-
-Bash:
+## Bash containers
 
 ```docker exec -it mentorship_web_1 /bin/bash```
 
@@ -19,3 +17,6 @@ Bash:
 
 * Update composer
 ```composer update```
+
+## Show results
+```http://localhost:8080/```
