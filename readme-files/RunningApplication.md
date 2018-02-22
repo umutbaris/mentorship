@@ -12,10 +12,12 @@
 
 ## Running composer
 
-* Run into the container
+* Bash into the php container
+
 ```docker exec -it mentorship_php_1 /bin/bash```
 
 * Update composer
+
 ```composer update```
 
 ## Show results
