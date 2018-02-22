@@ -1,16 +1,12 @@
 ## How to run docker compose
 
-* $ docker-compose up -d to run php and nginx images together 
+```docker-compose build```
 
-* http://localhost:8080/ to view results on browser
+```docker-compose up```
 
-# Run docker file
+```http://localhost:8080/```
 
-* $ docker build -t quicksort .
-* $ docker run -it --rm --name my-running-app quicksort
+Bash:
 
-
-#Installing PHP Unit
-* $ docker run --rm -v $(pwd):/app composer/composer:latest require --dev phpunit/phpunit ^6.0
-
-docker run -v $(pwd):/app --rm phpunit/phpunit:latest --bootstrap quicksort.php QuicksortTest.php
+```docker exec -it mentorship_web_1 /bin/bash```
+```docker exec -it mentorship_php_1 /bin/bash```
