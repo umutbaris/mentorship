@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * User: trkarasu
@@ -7,19 +8,30 @@
  */
 
 use PHPUnit\Framework\TestCase;
-
-require_once 'vendor/autoload.php';
-require_once __DIR__ . '/quicksort.php';
+/**
+ * Class QuicksortTest
+ */
 
 class QuicksortTest extends TestCase {
 
-    public function firstTest(){
+    /**
+     *
+     */
+    public function testFirst(){
         $quickSort = new QuickSort();
         $input =  [ 1, 9, 0, 3 ];
         $result = $quickSort->apply($input);
         $this->assertEquals([0, 1, 3, 9], $result);
     }
-}
 
-$test = new QuicksortTest();
-$test->firstTest();
+    /**
+     *
+     */
+    public function testSameVal(){
+        $quickSort = new QuickSort();
+        $input =  [ 0, 0, 0, 0 ];
+        $result = $quickSort->apply($input);
+        $this->assertEquals([0, 0, 0, 0], $result);
+    }
+
+}
