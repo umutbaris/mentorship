@@ -22,3 +22,5 @@
 
 ## Show results
 ```http://localhost:8080/```
+
+```docker run -v $(pwd):/app --rm phpunit/phpunit:latest --bootstrap QuickSort.php QuicksortTest.php```

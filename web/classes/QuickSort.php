@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Created by PhpStorm.
  * User: trkarasu
@@ -17,6 +16,7 @@
  * with same logic. Latest all arrays merged and returned.
  *
  */
+
 class QuickSort {
 
     /**
