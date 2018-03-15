@@ -16,31 +16,64 @@
  * with same logic. Latest all arrays merged and returned.
  *
  */
-
-class QuickSort {
+class QuickSort
+{
 
     /**
-     * QuickSort number sorting algorithm
+     * apply number sorting algorithm
      *
      * @param array $unsorted
      * @return array
      */
     public function apply($unsorted)
     {
+        if(empty($unsorted)){
+            return ["You should enter at least one value"];
+        }
+        if (!is_array($unsorted)) {
+            return ["Input should be array"];
+        }
+
+        return $this->is_array_int($unsorted);
+    }
+
+    /**
+     * Check to is all elements of array integer
+     * @param $unsorted
+     * @return array
+     */
+    public function is_array_int($unsorted)
+    {
+        foreach ($unsorted as $key) {
+            if (!(is_numeric($key))) {
+                return ["All inputs should be number"];
+            }
+        }
+
+        return $this->valid_inputs($unsorted);
+    }
+
+    /**
+     * Valid inputs sorting
+     * @param $unsorted
+     * @return array
+     */
+    public function valid_inputs($unsorted)
+    {
         if (count($unsorted) <= 1) {
             return $unsorted;
-        } else {
-            $pivot = $unsorted[0];
-            $left = array();
-            $right = array();
-            for ($i = 1; $i < count($unsorted); $i++) {
-                if ($unsorted[$i] < $pivot) {
-                    $left[] = $unsorted[$i];
-                } else {
-                    $right[] = $unsorted[$i];
-                }
-            }
-            return array_merge($this->apply($left), array($pivot), $this->apply($right));
         }
+        $pivot = $unsorted[0];
+        $left = array();
+        $right = array();
+        for ($i = 1; $i < count($unsorted); $i++) {
+            if ($unsorted[$i] < $pivot) {
+                $left[] = $unsorted[$i];
+            } else {
+                $right[] = $unsorted[$i];
+            }
+        }
+        return array_merge($this->valid_inputs($left), array($pivot), $this->valid_inputs($right));
     }
+
 }
