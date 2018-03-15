@@ -21,5 +21,5 @@ switch ( $type ) {
 }
 
 $quickSort = new QuickSort();
-$sorted    = $quickSort->apply( [3, 7, 1, 5] );
+$sorted    = $quickSort->apply( ["a", 2, 1, "b"] );
 echo json_encode($sorted);

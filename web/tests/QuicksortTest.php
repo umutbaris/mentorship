@@ -44,7 +44,10 @@ class QuicksortTest extends TestCase
         $quickSort = new QuickSort();
         $input = 1;
         $result = $quickSort->apply($input);
-        $this->assertEquals(["Input should be array"], $result);
+        $this->assertEquals([
+            'error' => true,
+            'message' => 'Input should be an array.'
+        ], $result);
     }
 
     /**
@@ -55,7 +58,10 @@ class QuicksortTest extends TestCase
         $quickSort = new QuickSort();
         $input = "a";
         $result = $quickSort->apply($input);
-        $this->assertEquals(["Input should be array"], $result);
+        $this->assertEquals([
+            'error' => true,
+            'message' => 'Input should be an array.'
+        ], $result);
     }
 
     /**
@@ -66,7 +72,10 @@ class QuicksortTest extends TestCase
         $quickSort = new QuickSort();
         $input = ["a", 2, 1, "b"];
         $result = $quickSort->apply($input);
-        $this->assertEquals(["All inputs should be number"], $result);
+        $this->assertEquals( [
+            'error' => true,
+            'message' => 'Input should be integer value.'
+        ], $result);
     }
 
 
@@ -78,7 +87,10 @@ class QuicksortTest extends TestCase
         $quickSort = new QuickSort();
         $input = [];
         $result = $quickSort->apply($input);
-        $this->assertEquals(["You should enter at least one value"], $result);
+        $this->assertEquals([
+            'error' => true,
+            'message' => 'You should enter at least one value.'
+        ], $result);
     }
 
 }

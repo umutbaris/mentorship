@@ -67,7 +67,7 @@ class QuickSort
         if (false == $is_valid) {
             return [
                 'error' => true,
-                'message' => 'Input should be interger value.'
+                'message' => 'Input should be integer value.'
             ];
         }
 
