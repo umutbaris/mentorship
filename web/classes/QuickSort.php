@@ -27,53 +27,79 @@ class QuickSort
      */
     public function apply($unsorted)
     {
-        if(empty($unsorted)){
-            return ["You should enter at least one value"];
-        }
-        if (!is_array($unsorted)) {
-            return ["Input should be array"];
+        $validation = $this->validate_inputs($unsorted);
+        if ( true == $validation['error'] ) {
+            return $validation;
         }
 
-        return $this->is_array_int($unsorted);
+        return $this->sort($unsorted);
     }
 
     /**
      * Check to is all elements of array integer
-     * @param $unsorted
+     * @param $data
      * @return array
      */
-    public function is_array_int($unsorted)
+    public function validate_inputs($data)
     {
-        foreach ($unsorted as $key) {
-            if (!(is_numeric($key))) {
-                return ["All inputs should be number"];
+         if (empty($data)) {
+            return [
+                'error' => true,
+                'message' => 'You should enter at least one value.'
+            ];
+        }
+
+        if (!is_array($data)) {
+            return [
+                'error' => true,
+                'message' => 'Input should be an array.'
+            ];
+        }
+
+        $is_valid = true;
+        foreach ($data as $key) {
+            if (!is_numeric($key)) {
+                $is_valid = false;
+                break;
             }
         }
 
-        return $this->valid_inputs($unsorted);
+        if (false == $is_valid) {
+            return [
+                'error' => true,
+                'message' => 'Input should be interger value.'
+            ];
+        }
+
+        return [
+            'error' => false
+        ];
     }
 
     /**
-     * Valid inputs sorting
+     * Array sorting
+     *
      * @param $unsorted
      * @return array
      */
-    public function valid_inputs($unsorted)
+    public function sort($unsorted)
     {
         if (count($unsorted) <= 1) {
             return $unsorted;
         }
+
         $pivot = $unsorted[0];
-        $left = array();
-        $right = array();
-        for ($i = 1; $i < count($unsorted); $i++) {
+        $left = [];
+        $right = [];
+        $size_unsorted = count($unsorted);
+        for ($i = 1; $i < $size_unsorted; $i++) {
             if ($unsorted[$i] < $pivot) {
                 $left[] = $unsorted[$i];
             } else {
                 $right[] = $unsorted[$i];
             }
         }
-        return array_merge($this->valid_inputs($left), array($pivot), $this->valid_inputs($right));
-    }
 
+        return array_merge($this->sort($left), [$pivot], $this->sort($right));
+    }
 }
