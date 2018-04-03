@@ -22,6 +22,9 @@ services:
       - mentorship-network
     expose:
       - 9000
+
+
+
     # tty: true
 networks:
   mentorship-network:

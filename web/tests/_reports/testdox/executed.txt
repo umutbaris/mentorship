@@ -1,0 +1,8 @@
+Quicksort
+ [x] First
+ [x] Same val
+ [x] Array
+ [x] Array for string
+ [x] Type check
+ [x] Null
+
