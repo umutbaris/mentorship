@@ -26,6 +26,6 @@ https://manual.phpdoc.org/HTMLSmartyConverter/HandS/phpDocumentor/tutorial_tags.
 
 
 
-# docker run -it --rm --name quicksort -v "$PWD":/Users/trkarasu/Projects/mentorship/pubic_html -w /Users/trkarasu/Projects/mentorship/public_html php:7.0-cli php public_html/test.php
+* docker run -it --rm --name quicksort -v "$PWD":/Users/trkarasu/Projects/mentorship/pubic_html -w /Users/trkarasu/Projects/mentorship/public_html php:7.0-cli php public_html/test.php
 
-$ 
+
