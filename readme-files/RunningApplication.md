@@ -23,8 +23,8 @@
 ## Show results
 ```http://localhost:8080/```
 
-## Run tests
+## Run tests and Create Coverage Report
 ```./vendor/bin/phpunit```
 
-## Coverage Report
+## Coverage Report Url
 ```http://localhost:8080/tests/_reports/coverage/QuicksortTest.php.html```
