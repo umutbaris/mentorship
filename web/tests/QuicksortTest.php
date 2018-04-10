@@ -23,6 +23,7 @@ class QuicksortTest extends TestCase
         $input = [1, 9, 0, 3];
         $result = $quickSort->apply($input);
         $this->assertEquals([0, 1, 3, 9], $result);
+        $this->assertEquals(false, $result['error']);
     }
 
     /**
@@ -44,10 +45,11 @@ class QuicksortTest extends TestCase
         $quickSort = new QuickSort();
         $input = 1;
         $result = $quickSort->apply($input);
-        $this->assertEquals([
-            'error' => true,
-            'message' => 'Input should be an array.'
-        ], $result);
+        $this->assertEquals( true, $result ['error']);
+        $this->assertEquals( 'Input should be an array.', $result ['message']);
+        $this->assertCount(2, $result);
+       
+
     }
 
     /**
@@ -58,10 +60,9 @@ class QuicksortTest extends TestCase
         $quickSort = new QuickSort();
         $input = "a";
         $result = $quickSort->apply($input);
-        $this->assertEquals([
-            'error' => true,
-            'message' => 'Input should be an array.'
-        ], $result);
+        $this->assertEquals(true, $result ['error']);
+        $this->assertEquals('Input should be an array.', $result ['message']);
+        $this->assertCount(2, $result);
     }
 
     /**
@@ -72,12 +73,10 @@ class QuicksortTest extends TestCase
         $quickSort = new QuickSort();
         $input = ["a", 2, 1, "b"];
         $result = $quickSort->apply($input);
-        $this->assertEquals( [
-            'error' => true,
-            'message' => 'Input should be integer value.'
-        ], $result);
+        $this->assertEquals( true, $result['error']);
+        $this->assertEquals( 'Input should be integer value.', $result['message']);
+        $this->assertCount(2, $result);
     }
-
 
     /**
      *Null control
@@ -87,10 +86,10 @@ class QuicksortTest extends TestCase
         $quickSort = new QuickSort();
         $input = [];
         $result = $quickSort->apply($input);
-        $this->assertEquals([
-            'error' => true,
-            'message' => 'You should enter at least one value.'
-        ], $result);
+        $this->assertnotEmpty($result);
+        $this->assertEquals(true, $result['error']);
+        $this->assertEquals('You should enter at least one value.', $result['message']);
+        $this->assertCount(2, $result);
     }
 
 }
