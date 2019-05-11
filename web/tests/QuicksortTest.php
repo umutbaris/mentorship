@@ -48,7 +48,7 @@ class QuicksortTest extends TestCase
         $this->assertEquals( true, $result ['error']);
         $this->assertEquals( 'Input should be an array.', $result ['message']);
         $this->assertCount(2, $result);
-       
+
 
     }
 
